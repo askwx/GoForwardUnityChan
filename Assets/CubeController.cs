@@ -39,10 +39,10 @@ public class CubeController : MonoBehaviour {
 	}
 
     //音
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if((collision.gameObject.tag == "block" )&& (collision.gameObject.tag =="ground")){
+        if((collision.gameObject.tag == "block" )|| (collision.gameObject.tag =="ground")){
             sound01.PlayOneShot(sound01.clip);
 
         }
@@ -50,6 +50,6 @@ public class CubeController : MonoBehaviour {
        
 
 
-        }
     }
+}
 
